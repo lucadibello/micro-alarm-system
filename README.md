@@ -1,4 +1,4 @@
-# Micro Alarm Sistem
+# Micro Alarm System
 
 ## Disclamer
 
