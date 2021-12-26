@@ -25,8 +25,12 @@ void MENU_init (int baud)
 /**
  * This function send the menu via UART
  */
-void MENU_print () {
-    putU4_string("1) Attiva\n");
+void MENU_print (int isActive) {
+    if (isActive) {
+        putU4_string("1) Disattiva\n");
+    } else {
+        putU4_string("1) Attiva\n");
+    }        
     putU4_string("2) Cambia password\n");
     putU4_string("3) Vedi Log\n");
     putU4_string("4) Cancella Log\n");
@@ -37,10 +41,24 @@ void MENU_print () {
  * @return User answer
  */
 char* MENU_getAnswer() {
-    return strg;
+    char* msg = strg;
+    return msg;
 }
 
+/**
+ * Send splashscreen via UART
+ */
+void MENU_splashscreen() {
+    putU4_string("     _____ _                _____ _                  _____         _             \n");
+    putU4_string("    |     |_|___ ___ ___   |  _  | |___ ___ _____   |   __|_ _ ___| |_ ___ _____ \n");
+    putU4_string("    | | | | |  _|  _| . |  |     | | .'|  _|     |  |__   | | |_ -|  _| -_|     |\n");
+    putU4_string("    |_|_|_|_|___|_| |___|  |__|__|_|__,|_| |_|_|_|  |_____|_  |___|_| |___|_|_|_|\n");
+    putU4_string("                                                          |___|                  \n");
+}
 
+/**
+ * Reset UART flags: RX flag + strg array
+ */
 void MENU_reset() {
     // Reset flag
     flagRx = 0;
@@ -64,6 +82,9 @@ void MENU_printError(char* msg) {
     putU4_string(out);
 }
 
+/**
+ * Uart interrupt handler routine - Reads messages and set data inside strg array
+ */
 void MenuAnswerHandler () {
     //Read the Uart4 RX buffer while data is available
 	if (U4STAbits.URXDA)
@@ -76,9 +97,9 @@ void MenuAnswerHandler () {
             j = 0;
             flagRx = 1; // flag goes to 1 when string is received completely. Remember to reset the flag in main.c 
         }
-        
-        // Procedure finished, exit from interrupt handler
-        IFS2bits.U4RXIF = 0; // clear interrupt flag
     }
+    
+    // Procedure finished, exit from interrupt handler
+    IFS2bits.U4RXIF = 0; // clear interrupt flag
 }
 
