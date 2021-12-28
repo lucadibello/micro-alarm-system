@@ -7,6 +7,8 @@
 #include "SecuritySystem.h"
 #include "Logger.h"
 #include "UART.h"
+#include "Speaker.h"
+#include "I2C.h"
 
 #define _SUPPRESS_PLIB_WARNING
 
@@ -53,6 +55,12 @@ int main() {
     
     // Setup logger
     LOGGER_Init();
+    
+    // Setup alarm speaker
+    SPEAKER_Init();
+    
+    // Setup I2C communication
+    I2C_Init();
     
     // Print splash screen when init finished
     MENU_splashscreen();
