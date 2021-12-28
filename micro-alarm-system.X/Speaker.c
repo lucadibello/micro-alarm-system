@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <p32xxxx.h>
+#include "Speaker.h"
 
 #define PB_FRQ 40000000
 #define TMR_FREQ_SINE 48000 // 48 kHz
