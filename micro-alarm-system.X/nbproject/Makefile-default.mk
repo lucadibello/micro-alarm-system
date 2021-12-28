@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c
+SOURCEFILES_QUOTED_IF_SPACED=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/UART.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/MenuHandler.o.d ${OBJECTDIR}/PasswordManager.o.d ${OBJECTDIR}/RGB.o.d ${OBJECTDIR}/SecuritySystem.o.d ${OBJECTDIR}/Logger.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/UART.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/MenuHandler.o.d ${OBJECTDIR}/PasswordManager.o.d ${OBJECTDIR}/RGB.o.d ${OBJECTDIR}/SecuritySystem.o.d ${OBJECTDIR}/Logger.o.d ${OBJECTDIR}/Speaker.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/Accelerometer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o
+OBJECTFILES=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o
 
 # Source Files
-SOURCEFILES=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c
+SOURCEFILES=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c
 
 
 
@@ -149,6 +149,24 @@ ${OBJECTDIR}/Logger.o: Logger.c  .generated_files/flags/default/ff0e05fc6b16aded
 	@${RM} ${OBJECTDIR}/Logger.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Logger.o.d" -o ${OBJECTDIR}/Logger.o Logger.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/Speaker.o: Speaker.c  .generated_files/flags/default/3e0d6c002198aedea3c856624c42eba12551254b .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Speaker.o.d 
+	@${RM} ${OBJECTDIR}/Speaker.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Speaker.o.d" -o ${OBJECTDIR}/Speaker.o Speaker.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/8a53a78b3c45a520d2d7204fbb604530027e7ef2 .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.o.d 
+	@${RM} ${OBJECTDIR}/I2C.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/I2C.o.d" -o ${OBJECTDIR}/I2C.o I2C.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/Accelerometer.o: Accelerometer.c  .generated_files/flags/default/a8fdd67e6f4572e6a2b3593040988533e151f73d .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Accelerometer.o.d 
+	@${RM} ${OBJECTDIR}/Accelerometer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Accelerometer.o.d" -o ${OBJECTDIR}/Accelerometer.o Accelerometer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/UART.o: UART.c  .generated_files/flags/default/4c330aa5413725b7a4196e00dfff5be045d20e3e .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
 	@${MKDIR} "${OBJECTDIR}" 
@@ -191,6 +209,24 @@ ${OBJECTDIR}/Logger.o: Logger.c  .generated_files/flags/default/5da1c354de835459
 	@${RM} ${OBJECTDIR}/Logger.o.d 
 	@${RM} ${OBJECTDIR}/Logger.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Logger.o.d" -o ${OBJECTDIR}/Logger.o Logger.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/Speaker.o: Speaker.c  .generated_files/flags/default/ce46c6533fd5fe9e857001e767424577ba1257a9 .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Speaker.o.d 
+	@${RM} ${OBJECTDIR}/Speaker.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Speaker.o.d" -o ${OBJECTDIR}/Speaker.o Speaker.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/cbd74b2de32733a5a466b3be516441ed5823f7fb .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.o.d 
+	@${RM} ${OBJECTDIR}/I2C.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/I2C.o.d" -o ${OBJECTDIR}/I2C.o I2C.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/Accelerometer.o: Accelerometer.c  .generated_files/flags/default/997364e031cac4074409869494720e67c5ac6eea .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Accelerometer.o.d 
+	@${RM} ${OBJECTDIR}/Accelerometer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Accelerometer.o.d" -o ${OBJECTDIR}/Accelerometer.o Accelerometer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

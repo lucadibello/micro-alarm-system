@@ -10,6 +10,8 @@
       <itemPath>RGB.h</itemPath>
       <itemPath>SecuritySystem.h</itemPath>
       <itemPath>Logger.h</itemPath>
+      <itemPath>Speaker.h</itemPath>
+      <itemPath>I2C.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -25,6 +27,9 @@
       <itemPath>RGB.c</itemPath>
       <itemPath>SecuritySystem.c</itemPath>
       <itemPath>Logger.c</itemPath>
+      <itemPath>Speaker.c</itemPath>
+      <itemPath>I2C.c</itemPath>
+      <itemPath>Accelerometer.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -217,6 +222,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
