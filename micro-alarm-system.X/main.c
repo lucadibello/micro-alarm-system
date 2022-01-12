@@ -9,6 +9,7 @@
 #include "UART.h"
 #include "Speaker.h"
 #include "I2C.h"
+#include "Accelerometer.h"
 
 #define _SUPPRESS_PLIB_WARNING
 
@@ -59,9 +60,9 @@ int main() {
     // Setup alarm speaker
     SPEAKER_Init();
     
-    // Setup I2C communication
-    I2C_Init();
-    
+    // Initializer Security System
+    SECURITY_Init();
+
     // Print splash screen when init finished
     MENU_splashscreen();
     
