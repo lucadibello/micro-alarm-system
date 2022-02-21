@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c
+SOURCEFILES_QUOTED_IF_SPACED=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c Timer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/UART.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/MenuHandler.o.d ${OBJECTDIR}/PasswordManager.o.d ${OBJECTDIR}/RGB.o.d ${OBJECTDIR}/SecuritySystem.o.d ${OBJECTDIR}/Logger.o.d ${OBJECTDIR}/Speaker.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/Accelerometer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o ${OBJECTDIR}/Timer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/UART.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/MenuHandler.o.d ${OBJECTDIR}/PasswordManager.o.d ${OBJECTDIR}/RGB.o.d ${OBJECTDIR}/SecuritySystem.o.d ${OBJECTDIR}/Logger.o.d ${OBJECTDIR}/Speaker.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/Accelerometer.o.d ${OBJECTDIR}/Timer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o
+OBJECTFILES=${OBJECTDIR}/UART.o ${OBJECTDIR}/main.o ${OBJECTDIR}/MenuHandler.o ${OBJECTDIR}/PasswordManager.o ${OBJECTDIR}/RGB.o ${OBJECTDIR}/SecuritySystem.o ${OBJECTDIR}/Logger.o ${OBJECTDIR}/Speaker.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Accelerometer.o ${OBJECTDIR}/Timer.o
 
 # Source Files
-SOURCEFILES=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c
+SOURCEFILES=UART.c main.c MenuHandler.c PasswordManager.c RGB.c SecuritySystem.c Logger.c Speaker.c I2C.c Accelerometer.c Timer.c
 
 
 
@@ -167,6 +167,12 @@ ${OBJECTDIR}/Accelerometer.o: Accelerometer.c  .generated_files/flags/default/a8
 	@${RM} ${OBJECTDIR}/Accelerometer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Accelerometer.o.d" -o ${OBJECTDIR}/Accelerometer.o Accelerometer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/Timer.o: Timer.c  .generated_files/flags/default/57165212c15f4c72c4cc2abe44598a23af760142 .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Timer.o.d 
+	@${RM} ${OBJECTDIR}/Timer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Timer.o.d" -o ${OBJECTDIR}/Timer.o Timer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/UART.o: UART.c  .generated_files/flags/default/4c330aa5413725b7a4196e00dfff5be045d20e3e .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
 	@${MKDIR} "${OBJECTDIR}" 
@@ -227,6 +233,12 @@ ${OBJECTDIR}/Accelerometer.o: Accelerometer.c  .generated_files/flags/default/99
 	@${RM} ${OBJECTDIR}/Accelerometer.o.d 
 	@${RM} ${OBJECTDIR}/Accelerometer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Accelerometer.o.d" -o ${OBJECTDIR}/Accelerometer.o Accelerometer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/Timer.o: Timer.c  .generated_files/flags/default/34c195b8651b84bc1f232ab41173713b9dd93946 .generated_files/flags/default/115e56875758b112e91d6b9813d23d9838dcc952
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Timer.o.d 
+	@${RM} ${OBJECTDIR}/Timer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/Timer.o.d" -o ${OBJECTDIR}/Timer.o Timer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 
